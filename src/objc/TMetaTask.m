@@ -141,9 +141,10 @@
 	[self willChangeValueForKey:@"filteredDuration"];
 	while (aTask = [enumerator nextObject])
 	{
-		aTask.filterPredicate = predicate;
+		[aTask setFilterPredicate:predicate];
 	}
 	[self didChangeValueForKey:@"filteredDuration"];
+
 }
 
 -(int) filteredDuration {

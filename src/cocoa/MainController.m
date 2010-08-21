@@ -159,7 +159,7 @@
 - (void) applyFilterToCurrentTasks {
 	// in order to apply the filter to the tasks we need to set the predicate on each one
 	for (id<ITask>task in self.currentTasks) {
-		task.filterPredicate = self.filterPredicate;
+		[task setFilterPredicate:self.filterPredicate];
 	}
 }
 
