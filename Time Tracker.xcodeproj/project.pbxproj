@@ -591,8 +591,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
 				PRODUCT_NAME = "Time Tracker";
-				SDKROOT = macosx10.5;
-				VALID_ARCHS = "ppc ppc64 ppc7400 ppc970 i386 x86_64";
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
