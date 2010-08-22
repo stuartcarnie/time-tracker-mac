@@ -205,7 +205,7 @@
             break;
             
         default:
-            NSLog(@"Unexpected comparator: @%", predicate);
+            NSLog(@"Unexpected comparator: %@", predicate);
             break;
     }
     
