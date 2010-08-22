@@ -92,7 +92,7 @@ static id staticInstance;
 }
 
 - (NSDate *)dayEndDateWithDaysFromToday:(NSInteger)days {
-    return [[self dateWithDaysFromToday:days-1] addTimeInterval:-60];
+    return [[self dateWithDaysFromToday:days-1] dateByAddingTimeInterval:-60];
 }
 
 #pragma mark week functions
@@ -105,13 +105,13 @@ static id staticInstance;
                                          fromDate:now];
 	[rangeStartComps setWeekday:[gregorian firstWeekday]];
 	NSDate *rangeStart = [gregorian dateFromComponents:rangeStartComps];
-	rangeStart = [rangeStart addTimeInterval:-(weeks * 3600 * 24 * 7)];
+	rangeStart = [rangeStart dateByAddingTimeInterval:-(weeks * 3600 * 24 * 7)];
 	return rangeStart;
 }
 
 - (NSDate *)weekEndDateWithWeeksFromToday:(NSInteger)weeks {
     NSDate *result = [self weekStartDateWithWeeksFromToday:weeks - 1];
-    return [result addTimeInterval:-60];
+    return [result dateByAddingTimeInterval:-60];
 //    return [self weekStartDateWithWeeksFromToday:weeks - 1];
 }
 
@@ -161,7 +161,7 @@ static id staticInstance;
 }
 
 - (NSDate*) monthEndDateWithMonthsFromToday:(NSInteger) months {
-    return [[self monthStartDateWithMonthsFromToday:months - 1] addTimeInterval:-60];
+    return [[self monthStartDateWithMonthsFromToday:months - 1] dateByAddingTimeInterval:-60];
 }
 
 - (NSDate *)thisMonthStartTime

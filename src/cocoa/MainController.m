@@ -764,8 +764,9 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager]; 
 	NSString *folder = @"~/Library/Application Support/TimeTracker/"; 
 	folder = [folder stringByExpandingTildeInPath]; 
-	if ([fileManager fileExistsAtPath: folder] == NO) { 
-		[fileManager createDirectoryAtPath: folder attributes: nil]; 
+	if ([fileManager fileExistsAtPath: folder] == NO) {
+		[fileManager createDirectoryAtPath:folder 
+			   withIntermediateDirectories:YES attributes:nil error:nil];
 	} 
 	NSString *fileName = @"data.plist"; 
 	return [folder stringByAppendingPathComponent: fileName]; 
