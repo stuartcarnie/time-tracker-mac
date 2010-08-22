@@ -133,13 +133,13 @@
             // nothing to filter
             return nil;
         } else if (_extraFilterPredicate == nil) {
-            finalPredicateTemplate = [generalPredicate retain];
+            finalPredicateTemplate = generalPredicate;
         } else if (generalPredicate == nil) {
-            finalPredicateTemplate = [_extraFilterPredicate retain];
+            finalPredicateTemplate = _extraFilterPredicate;
         } else {
-            finalPredicateTemplate = [[NSCompoundPredicate 
+            finalPredicateTemplate = [NSCompoundPredicate 
                             andPredicateWithSubpredicates:
-                                [NSArray arrayWithObjects:generalPredicate, _extraFilterPredicate, nil]] retain];
+                                [NSArray arrayWithObjects:generalPredicate, _extraFilterPredicate, nil]];
         }
         // now fill in the variables
         _currentPredicate = [[TTParsedPredicate producePredicateFromTemplate:finalPredicateTemplate] retain];
