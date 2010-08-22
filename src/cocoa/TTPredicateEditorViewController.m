@@ -21,7 +21,7 @@
     }
     NSInteger editorHeight = [_editor numberOfRows] * [_editor rowHeight];
     
-    NSLog(@"Have notification height: %d",editorHeight);
+    NSLog(@"Have notification height: %d", editorHeight);
     NSRect frame;
     
     // make sure the editor is on the bottom of the splitview
@@ -164,6 +164,7 @@
     windowFrame.size.height += growing ? sizeChange.height : -sizeChange.height;
     windowFrame.origin.y -= growing ? sizeChange.height : -sizeChange.height;
     [window setFrame:windowFrame display:YES animate:YES];
+ */
     
     /* restore the autoresizing mask */
   //  [outlineScrollView setAutoresizingMask:oldOutlineViewMask];
