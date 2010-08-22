@@ -213,7 +213,7 @@
 @property(readonly) BOOL timerRunning;
 @property(retain, nonatomic) NSPredicate* extraFilterPredicate;
 @property(retain, nonatomic) NSString *updateURL;
-@property BOOL decimalHours;
+@property(nonatomic) BOOL decimalHours;
 @property(retain, nonatomic) id<ITask> selectedTask;
 @property(retain, nonatomic) NSArray* currentTasks;
 @property(retain, nonatomic) TaskEditorController* taskEditorController;
