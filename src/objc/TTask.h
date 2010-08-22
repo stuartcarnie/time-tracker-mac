@@ -37,13 +37,12 @@
 - (void) updateTotalBySeconds:(int)diffInSeconds sender:(id)theSender;
 
 @property BOOL closed;
-@property(readonly) NSInteger totalTime;
-@property(readonly) NSInteger filteredDuration;
+@property (readonly) NSInteger totalTime;
+@property (readonly) NSInteger filteredDuration;
 
-@property(retain, nonatomic) NSPredicate* filterPredicate;
-@property(retain, nonatomic) NSString* name;
-@property(retain, nonatomic) TProject* parentProject;
-@property int taskId;
+@property (retain, nonatomic) NSPredicate* filterPredicate;
+@property (retain, nonatomic) NSString* name;
+@property (retain, nonatomic) TProject* parentProject;
 @property (nonatomic) int taskId;
 
 
