@@ -44,6 +44,7 @@
 @property(retain, nonatomic) NSString* name;
 @property(retain, nonatomic) TProject* parentProject;
 @property int taskId;
+@property (nonatomic) int taskId;
 
 
 @end
